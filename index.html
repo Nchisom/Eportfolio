@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Noah Chisom</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("YQDjbab4kT_mB8SrGJ");
+   })();
+</script>
+
+  </head>
+  <body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+      <nav>
+        <figure>
+          <img
+            id="personal-logo"
+            src="./assets/logo.png
+                "
+            alt=""
+          />
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >About</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Projects</a
+            >
+          </li>
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Contact</a
+            >
+          </li>
+          <li class="nav__link click">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              ><i class="fas fa-adjust" onclick="toggleContrast()"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="header__content">
+          <h1 class="title">Hello</h1>
+          <h1 class="title title--secondary">I'm Noah</h1>
+          <p class="header__para">
+            I am <b class="secondary"> Frontend Software Engineer </b> who is
+            dedicated to building elegant and responsive web applications that
+            prioritizes user experiences.
+            <br />
+            More <b class="secondary about-me" onclick="toggleModal()">about me.</b>
+          </p>
+          <div class="social__list">
+            <a
+              href="https://www.linkedin.com/in/noah-chisom-aa585420a/"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/Nchisom"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="" target="_blank" class="social__link click">
+              <i class="fas fa-file-pdf"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <a href="#">
+          <button class="mail__btn click" onclick="toggleModal()">
+            <i class="fas fa-envelope"></i>
+          </button>
+      </a>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here is a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            I am a 20 year-old
+            <b class="secondary"> Frontend Software Engineer</b> with an
+            unwavering passion for developing websites that feature great
+            <b class="secondary">user experiences.</b>
+            <br />
+            I am currently building a repertoire of advanced and
+            <b class="secondary"> industry leading skillsets </b> in order to
+            complete difficult engineering problems. I strive for knowledge in
+            order to learn from some of the most talented and experienced
+            software engineers.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/Html.png"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/css.png" alt="" />
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img javascript"
+                src="./assets/javascript.png"
+                alt=""
+              />
+              <span class="language__name">Javascript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/react.png"
+                alt=""
+              />
+              <span class="language__name">React</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/firebase.svg"
+                alt=""
+              />
+              <span class="language__name">Firebase</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+            <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h3 class="modal__sub-title modal__sub-title--contact">
+            I am currently open to new opportunities.
+          </h3>
+          <form onsubmit="contact(event)" id="contact__form">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input name="user_name" type="text" class="input" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input name="user_email" type="email" class="input" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea
+                name="message"
+                type="text"
+                class="input"
+                required
+              ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">Send it my way</button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thank you, the message has been received! Looking forward to speaking to you soon.
+          </div>
+        </div>
+      </div>
+      <img src="./assets/semi circle.svg" class="shape shape--0" alt="">
+      <img src="./assets/circle.svg" class="shape shape--1" alt="">
+      <img src="./assets/squiggly.svg" class="shape shape--2" alt="">
+      <img src="./assets/circle.svg" class="shape shape--3" alt="">
+      <img src="./assets/triangle.svg" class="shape shape--4" alt="">
+      <img src="./assets/circle.svg" class="shape shape--5" alt="">
+      <img src="./assets/squiggly.svg" class="shape shape--6" alt="">
+      <img src="./assets/circle.svg" class="shape shape--7" alt="">
+      <img src="./assets/semi circle.svg" class="shape shape--8" alt="">
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Some of my <span class="secondary">projects!</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/Treact Copy img.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">TREACT Copy</h3>
+                  <h4 class="project__description--sub-title">HTML, CSS</h4>
+                  <p class="project__description--para">
+                    This copy of a Treact template features innovative styling
+                    and user friendly design while emphasizing my CSS skills.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Nchisom/Treact-clone-practice"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://nchisom.github.io/Treact-clone-practice/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./assets/Ecommerce.png" class="project__img" alt="" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Ecommerce Website</h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, Javascript, React
+                  </h4>
+                  <p class="project__description--para">
+                    This ecommerce website features a respoonsive design
+                    allowing for easy navigation and use.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Nchisom/Treact-clone-practice"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://nchisom.github.io/Treact-clone-practice/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer__row">
+        <a href="#" class="footer__anchor">
+          <figure class="footer__logo">
+            <img src="./assets/logo.png" class="footer__logo--img" alt="" />
+          </figure>
+          <span class="footer__logo--popper">
+            Top
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+          </span>
+        </a>
+        <div class="footer__social--list">
+          <a
+            href="https://github.com/Nchisom"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            target="_blank"
+            >Github</a
+          >
+          <a
+            href="https://www.linkedin.com/in/noah-chisom-aa585420a/"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            target="_blank"
+            >Linkedin</a
+          >
+          <a
+            href="#" onclick="toggleModal()"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            >Email</a
+          >
+          <a
+            href=""
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            target="_blank"
+            >Resume</a
+          >
+        </div>
+        <div class="footer__copyright">Copyright © 2022 Noah Chisom</div>
+      </div>
+    </footer>
+  </body>
+</html>
