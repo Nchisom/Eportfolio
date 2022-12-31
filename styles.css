@@ -543,6 +543,10 @@ PROJECTS
     transition: all 600ms ease;
 }
 
+.project__img--adjust {
+    transform: scale(1.02);
+}
+
 .project__wrapper {
     position: relative;
     border-radius: 20px;
